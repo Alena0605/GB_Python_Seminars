@@ -8,11 +8,11 @@ def fib_negafib_nums(number):
     if number == 1 or num == 2:
         return fib_nums_list
     
-    for i in range(2, number + 1):
+    for i in range(1, number):
         size = len(fib_nums_list) - 1
         fib = fib_nums_list[size - 1] + fib_nums_list[size]
         fib_nums_list.append(fib)
-        fib_nums_list.insert(0, fib) if i % 2 != 0 else fib_nums_list.insert(0, -fib)
+        fib_nums_list.insert(0, fib) if i % 2 == 0 else fib_nums_list.insert(0, -fib)
 
     return fib_nums_list
 
